@@ -1,0 +1,22 @@
+table.zebura{
+    width:100%;
+    background:#FFF;
+    border-collapse: collapse;
+}
+
+table.zebura tr th{
+    background:#e0e0e0;
+}
+
+table.zebura tr th,
+table.zebura tr td{
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding:7px 10px;
+    font-size:14px;
+}
+
+table.zebura tr:nth-child(even){
+    background:#F5F5F5;
+}
+

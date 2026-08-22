@@ -1,0 +1,26 @@
+table.price{
+    width:100%;
+    background:#FFF;
+    border-collapse: collapse;
+}
+
+table.price tr th{
+    background:#e0e0e0;
+}
+
+table.price tr th,
+table.price tr td{
+    border:1px solid #ccc;
+    padding:20px 20px;
+    font-size:14px;
+}
+
+table.price tr td.price{
+    font-size:1.3em;
+}
+
+table.price tr td.price,
+table.price tr td.name{
+    text-align:center;
+    font-weight:bold;
+}

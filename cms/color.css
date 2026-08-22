@@ -1,0 +1,36 @@
+
+        body{background:#f1f2f2;}
+
+        header{background:#fefefe;}
+        header h1{color:#484949;}
+
+        nav,nav ul{background:#bab9bd;}
+        nav a{color:#FFFFFF;}
+
+        main h1{color:#333333;}
+        #eyecatch h1{color:initial;}
+
+        main h2{color:#333333;}
+        #eyecatch h2{color:initial;}
+
+        main h3{color:#333333;}
+        #eyecatch h3{color:initial;}
+
+        main h4{color:#333333;}
+        main .text{color:#333333;}
+
+        main a{color:#0E11E9;}
+
+        main a.button1{
+            background:#FFFFFFee;
+            color:#333333;
+            border:1px solid #0000001D;
+        }
+        main a.button2{
+        background:#1d94aa;
+        color:#FFFFFF;
+        }
+
+        footer{background:#bab9bd;}
+        footer *{color:#FFFFFF;}
+        

@@ -1,0 +1,43 @@
+body{background:#ffffff;}
+
+header{background:#FFFFFF;color:#333333;}
+
+nav,nav ul{background:#000000;}
+
+nav a{color:#FFFFFF;}
+
+h1{color:#333333;}
+
+h2{color:#333333;}
+
+h3{color:#333333;}
+
+h4{color:#333333;}
+
+p{color:#333333;}
+
+main span{color:#333333;}
+
+#hero {background:#CCCCCC;}
+
+#hero h1{color:#FFF;}
+
+#hero p{color:#FFF;}
+
+#eyecatch {background:#CCCCCC;}
+
+#eyecatch h1{color:#FFF;}
+
+main .text{color:#333333;}
+
+main a{color:#555555;}
+
+main a.button1{background:#FFFFFF;color:#333333;border:1px solid #000000;}
+
+main a.button2{background:#FFFFFF;color:#333333;border:1px solid #000000;}
+
+main hr{border-color:#CCCCCC;}
+
+footer{background:#333333;}
+
+footer *{color:#FFFFFF;}

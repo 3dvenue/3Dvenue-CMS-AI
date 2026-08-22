@@ -1,0 +1,22 @@
+table.history{
+    width:100%;
+    background:#FFF;
+    border-collapse: collapse;
+}
+
+table.history tr th,
+table.history tr td{
+    border:1px solid #999;
+    padding:20px 20px;
+    font-size:14px;
+}
+
+table.history tr th{
+    width:max-content;
+    background:#DDD;
+}
+
+table.history tr td{
+    width:max-content;
+    background:#F0F0F0;
+}

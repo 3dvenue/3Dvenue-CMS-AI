@@ -1,0 +1,37 @@
+table.schedule{
+    width:100%;
+    background:#F5F5F5;
+    border-collapse: collapse;
+}
+
+table.schedule tr th,
+table.schedule tr td{
+    text-align: center;
+    border:2px solid #FFF;
+    padding:10px 10px;
+    font-size:14px;
+}
+
+table.schedule tr td{
+    width:max-content;
+    background:#none;
+}
+
+table.schedule tr th{
+    width:max-content;
+    background:#DDD;
+}
+
+
+table.schedule tr th:nth-child(1){
+    background:none;
+}
+
+table.schedule tr:nth-child(1) th:nth-child(1){
+    background:#DDD;
+}
+
+table.schedule tr:nth-child(1) th{
+    padding:20px 0;
+}
+

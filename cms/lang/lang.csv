@@ -1,0 +1,121 @@
+﻿key,ja,en,fr,de,es,it,pt
+language,Japanese,English,French,German,Spanish,Italian,Portuguese
+save,保存,save,Enregistrer,Speichern,Guardar,Salva,Guardar
+add,追加,add,Ajouter,Hinzufügen,Añadir,Aggiungi,Adicionar
+del,削除,delete,Supprimer,Löschen,Eliminar,Elimina,Excluir
+edit,編集,edit,Modifier,Bearbeiten,Editar,Modifica,Editar
+update,更新,update,Mettre à jour,Aktualisieren,Actualizar,Aggiorna,Atualizar
+setup,設定,set,Paramètres,Einstellungen,Ajustes,Impostazioni,Configurações
+check,確認,check,Vérifier,Prüfen,Verificar,Controlla,Verificar
+select,ファイルを選択,select file,Sélectionner un fichier,Datei auswählen,Seleccionar archivo,Seleziona file,Selecionar arquivo
+reset,リセット,reset,Réinitialiser,Zurücksetzen,Restablecer,Ripristina,Redefinir
+newpage,新しいページを追加,Add New Page,Ajouter une nouvelle page,Neue Seite hinzufügen,Añadir nueva página,Aggiungi nuova pagina,Adicionar nova página
+fullsize,全面表示,full width,Pleine largeur,Volle Breite,Ancho completo,Larghezza completa,Largura total
+open,開く,open,Ouvrir,Öffnen,Abrir,Apri,Abrir
+close,閉じる,close,Fermer,Schließen,Cerrar,Chiudi,Fechar
+trash,削除,trash,Corbeille,Papierkorb,Papelera,Cestino,Lixeira
+publish,公開,publish,Publier,Veröffentlichen,Publicar,Pubblica,Publicar
+name,名前,Name,Nom,Name,Nombre,Nome,Nome
+desc,詳細,details,Détails,Details,Detalles,Dettagli,Detalhes
+section_add,セクションを追加する,Add Section,Ajouter une section,Abschnitt hinzufügen,Añadir sección,Aggiungi sezione,Adicionar seção
+section_del,セクションを削除する,Delete Section,Supprimer la section,Abschnitt löschen,Eliminar sección,Elimina sezione,Excluir seção
+html_edit,HTMLを編集,Edit HTML,Modifier le HTML,HTML bearbeiten,Editar HTML,Modifica HTML,Editar HTML
+reorder,並び順を変更,Reorder,Réorganiser,Neu anordnen,Reordenar,Riordina,Reordenar
+indextop,100点を目指してサイトを最適化しましょう！,Google PageSpeed Insights 100,Visez 100 points sur Google PageSpeed Insights !,100 Punkte bei Google PageSpeed Insights anstreben!,¡Apunta a 100 puntos en Google PageSpeed Insights!,Punta a 100 punti su Google PageSpeed Insights!,Mire nos 100 pontos no Google PageSpeed Insights!
+index01,クイックアクセス,Quick Access,Accès rapide,Schnellzugriff,Acceso rápido,Accesso rapido,Acesso rápido
+index02,編集ツール,Editing Tools,Outils d’édition,Bearbeitungswerkzeuge,Herramientas de edición,Strumenti di modifica,Ferramentas de edição
+dash,ダッシュボード,Dashboard,Tableau de bord,Dashboard,Panel de control,Dashboard,Painel
+nav_header1,コンテンツ,Contents,Contenu,Inhalte,Contenido,Contenuti,Conteúdo
+nav_header2,構造・デザイン,Structure / Design,Structure / Design,Struktur / Design,Estructura / Diseño,Struttura / Design,Estrutura / Design
+nav_close,メニューを閉じる,Close Menu,Fermer le menu,Menü schließen,Cerrar menú,Chiudi menu,Fechar menu
+page_edit,ページ編集,Page Eitor,Éditeur de page,Seiteneditor,Editor de página,Editor pagina,Editor de página
+image_edit,画像編集,Image Editor,Éditeur d’image,Bildeditor,Editor de imágenes,Editor immagini,Editor de imagem
+navi_edit,ナビゲーションの編集,Navigation Eitor,Éditeur de navigation,Navigationseditor,Editor de navegación,Editor navigazione,Editor de navegação
+pdf_edit,PDF登録,PDF Settings,Paramètres PDF,PDF-Einstellungen,Configuración PDF,Impostazioni PDF,Configurações PDF
+color_edit,サイトカラー設定,Site Color Settings,Paramètres des couleurs du site,Website-Farbeinstellungen,Configuración de colores del sitio,Impostazioni colori sito,Configurações de cores do site
+template_edit,テンプレート開発,Template Manager,Développement de modèles,Template-Entwicklung,Desarrollo de plantillas,Sviluppo template,Desenvolvimento de templates
+parts_edit,パーツ制作,Parts Editor,Création de composants,Parts-Erstellung,Creación de componentes,Creazione componenti,Criação de componentes
+image_select,画像を選択,Choose Image,Choisir une image,Bild auswählen,Elegir imagen,Scegli immagine,Escolher imagem
+image_name,画像名,Image name,Nom de l’image,Bildname,Nombre de la imagen,Nome immagine,Nome da imagem
+image_upload,画像をアップロード,Upload Image,Téléverser une image,Bild hochladen,Subir imagen,Carica immagine,Carregar imagem
+image_create,画像を生成,Generate Image,Générer une image,Bild generieren,Generar imagen,Genera immagine,Gerar imagem
+navi_confirm,OKで完全削除します。キャンセルで残します。,Press OK to permanently delete the image.Press Cancel to keep it.,Appuyez sur OK pour supprimer définitivement l’image. Appuyez sur Annuler pour la conserver.,"Drücken Sie OK, um das Bild endgültig zu löschen. Drücken Sie Abbrechen, um es zu behalten.",Pulse OK para eliminar la imagen de forma permanente. Pulse Cancelar para conservarla.,Premi OK per eliminare definitivamente l’immagine. Premi Annulla per conservarla.,Pressione OK para excluir a imagem permanentemente. Pressione Cancelar para mantê-la.
+color_mapping_start,マッピングを開始,Start Mapping,Démarrer le mappage,Mapping starten,Iniciar mapeo,Avvia mappatura,Iniciar mapeamento
+seo_sitename,共通タイトル名,Site Name,Nom du site,Website-Name,Nombre del sitio,Nome del sito,Nome do site
+seo_sitename_memo,"※共通で表示される名前（会社名,サービス、ブランド名、大学名など）",Common name displayed across the website,* Nom commun affiché sur l’ensemble du site,"* Gemeinsamer Name, der auf der gesamten Website angezeigt wird",* Nombre común que se muestra en todo el sitio web,* Nome comune visualizzato in tutto il sito web,* Nome comum exibido em todo o site
+seo_pagetitle,ページタイトル,Page Title,Titre de la page,Seitentitel,Título de la página,Titolo della pagina,Título da página
+seo_pagetitle_memo,※日本語30文字以内が良い,Recommended: 50–60 characters,* Recommandé : 50 à 60 caractères,* Empfohlen: 50–60 Zeichen,* Recomendado: 50–60 caracteres,* Consigliato: 50–60 caratteri,* Recomendado: 50–60 caracteres
+seo_description,ページ概要,Page Description,Description de la page,Seitenbeschreibung,Descripción de la página,Descrizione della pagina,Descrição da página
+seo_description_memo,※日本語では70〜120 文字が理想的,* Recommended: 120–160 characters,* Recommandé : 120 à 160 caractères,* Empfohlen: 120–160 Zeichen,* Recomendado: 120–160 caracteres,* Consigliato: 120–160 caratteri,* Recomendado: 120–160 caracteres
+seo_other,Speed Insightの検出からの対応策,PageSpeed Insights Tips,Conseils PageSpeed Insights,PageSpeed Insights Tipps,Consejos de PageSpeed Insights,Suggerimenti PageSpeed Insights,Dicas do PageSpeed Insights
+seo_other_memo,listタグやmetaタグなどの補正が必要な時にheader内に書けるタグ類など,"* Add extra tags for SEO, meta, structured data, verification, etc.","* Ajoutez ici des balises supplémentaires pour le SEO, les balises meta, les données structurées, la vérification, etc.","* Fügen Sie hier zusätzliche Tags für SEO, Meta-Tags, strukturierte Daten, Verifizierung usw. hinzu.","* Añada aquí etiquetas adicionales para SEO, meta, datos estructurados, verificación, etc.","* Aggiungi qui tag extra per SEO, meta tag, dati strutturati, verifica, ecc.","* Adicione aqui tags extras para SEO, meta tags, dados estruturados, verificação etc."
+seo_ogimage,SNS用画像,Social Share Image,Image de partage social,Bild für Social Sharing,Imagen para compartir en redes,Immagine per la condivisione social,Imagem de compartilhamento social
+seo_ogimage_memo,※1200×600を推薦,* Recommended size: 1200 × 600 px,* Taille recommandée : 1200 × 600 px,* Empfohlene Größe: 1200 × 600 px,* Tamaño recomendado: 1200 × 600 px,* Dimensione consigliata: 1200 × 600 px,* Tamanho recomendado: 1200 × 600 px
+seo_jsonld,構造化データ,Structured Data,Données structurées,Strukturierte Daten,Datos estructurados,Dati strutturati,Dados estruturados
+seo_jsonld_memo,※必要なページは限られています。作成のコツはAIなどに個別のページURLを貼り付けJSON_LDを作ってもらったものを張り付けるのが早いです,"* Only a few pages typically require structured data.  
+A quick way is to paste the page URL into an AI tool and generate JSON-LD for that specific page.","* Seules quelques pages nécessitent généralement des données structurées.
+Une méthode rapide consiste à coller l’URL de la page dans un outil d’IA et à générer le JSON-LD pour cette page précise.","* In der Regel benötigen nur wenige Seiten strukturierte Daten.
+Eine schnelle Methode ist, die Seiten-URL in ein KI-Tool einzufügen und JSON-LD für genau diese Seite generieren zu lassen.","* Normalmente, solo unas pocas páginas necesitan datos estructurados.
+Una forma rápida es pegar la URL de la página en una herramienta de IA y generar el JSON-LD para esa página concreta.","* Di solito solo poche pagine richiedono dati strutturati.
+Un modo rapido è incollare l’URL della pagina in uno strumento di IA e generare il JSON-LD per quella pagina specifica.","* Normalmente, apenas algumas páginas precisam de dados estruturados.
+Uma forma rápida é colar o URL da página numa ferramenta de IA e gerar o JSON-LD para essa página específica."
+seo_noindex,検索結果に表示しない,Hide from Search Engines,Masquer aux moteurs de recherche,Vor Suchmaschinen verbergen,Ocultar de los motores de búsqueda,Nascondi dai motori di ricerca,Ocultar dos motores de busca
+seo_noindex_memo,※グーグルなどの検索エンジンに拾われたくないページに設定（あまりやらないと思います）,"* Use this for pages you do not want indexed by search engines like Google.  
+(Not commonly needed.)","* Utilisez ce réglage pour les pages que vous ne voulez pas voir indexées par les moteurs de recherche comme Google.
+(Peu courant.)","* Verwenden Sie dies für Seiten, die nicht von Suchmaschinen wie Google indexiert werden sollen.
+(Wird selten benötigt.)","* Use esta opción para páginas que no desea que sean indexadas por motores de búsqueda como Google.
+(No suele ser necesario.)","* Usa questa opzione per le pagine che non vuoi far indicizzare dai motori di ricerca come Google.
+(Non è comunemente necessario.)","* Use isto para páginas que não pretende que sejam indexadas por motores de busca como o Google.
+(Normalmente não é necessário.)"
+page_edit_memo,コンテンツの作成編集を行います,Create and edit page content,Créer et modifier le contenu de la page,Seiteninhalte erstellen und bearbeiten,Crear y editar el contenido de la página,Crea e modifica il contenuto della pagina,Criar e editar o conteúdo da página
+image_edit_memo,画像のアップロードを行います,Upload and manage images,Téléverser et gérer les images,Bilder hochladen und verwalten,Subir y gestionar imágenes,Carica e gestisci le immagini,Carregar e gerir imagens
+navi_edit_memo,グローバルナビゲーションの設定を行います,Configure the global navigation,Configurer la navigation globale,Globale Navigation konfigurieren,Configurar la navegación global,Configura la navigazione globale,Configurar a navegação global
+color_edit_memo,サイト全体の色設定を行います,Configure colors for the entire site,Configurer les couleurs de l’ensemble du site,Farben für die gesamte Website konfigurieren,Configurar los colores de todo el sitio,Configura i colori dell’intero sito,Configurar as cores de todo o site
+template_edit_memo,テンプレートの作成とカスタマイズ,Create and customize templates,Créer et personnaliser des modèles,Templates erstellen und anpassen,Crear y personalizar plantillas,Crea e personalizza i template,Criar e personalizar templates
+parts_edit_memo,再利用可能なパーツを作成します,Create reusable parts,Créer des composants réutilisables,Wiederverwendbare Parts erstellen,Crear componentes reutilizables,Crea parti riutilizzabili,Criar componentes reutilizáveis
+navi_howto,"ナビゲーションの追加は[＋]ボタン、削除はキーボードの[Del]キー。<br>
+        保存ボタンを押せば作業内容が記録されます。<br />
+        作業内容を公開中のページに追加するには公開ボタンを押してください。","Add navigation items with the [+] button, and remove them with the [Del] key.<br>Press the Save button to store your changes.<br />Press the Publish button to add your changes to the live page.","Ajoutez des éléments de navigation avec le bouton [+] et supprimez-les avec la touche [Del].<br>
+Appuyez sur le bouton Enregistrer pour conserver vos modifications.<br />
+Appuyez sur le bouton Publier pour ajouter vos modifications à la page publique.","Fügen Sie Navigationselemente mit der Schaltfläche [+] hinzu und entfernen Sie sie mit der Taste [Del].<br>
+Drücken Sie die Schaltfläche Speichern, um Ihre Änderungen zu sichern.<br />
+Drücken Sie die Schaltfläche Veröffentlichen, um Ihre Änderungen zur öffentlichen Seite hinzuzufügen.","Añada elementos de navegación con el botón [+] y elimínelos con la tecla [Del].<br>
+Pulse el botón Guardar para almacenar los cambios.<br />
+Pulse el botón Publicar para añadir los cambios a la página publicada.","Aggiungi elementi di navigazione con il pulsante [+] e rimuovili con il tasto [Del].<br>
+Premi il pulsante Salva per registrare le modifiche.<br />
+Premi il pulsante Pubblica per aggiungere le modifiche alla pagina pubblica.","Adicione itens de navegação com o botão [+] e remova-os com a tecla [Del].<br>
+Pressione o botão Guardar para armazenar as alterações.<br />
+Pressione o botão Publicar para adicionar as alterações à página publicada."
+access,アクセス解析,Access Analytics,Analyse des accès,Zugriffsanalyse,Análisis de acceso,Analisi accessi,Análise de acesso
+daily_access,日別アクセス数,Daily Access,Accès quotidiens,Tägliche Zugriffe,Accesos diarios,Accessi giornalieri,Acessos diários
+daily_access_memo,日ごとのアクセスを確認,View daily access,Voir les accès quotidiens,Tägliche Zugriffe anzeigen,Ver accesos diarios,Visualizza accessi giornalieri,Ver acessos diários
+time-access,時間別アクセス数,Hourly Access,Accès horaires,Stündliche Zugriffe,Accesos por hora,Accessi orari,Acessos por hora
+time-access_memo,時間ごとのアクセスを確認,View hourly access,Voir les accès horaires,Stündliche Zugriffe anzeigen,Ver accesos por hora,Visualizza accessi orari,Ver acessos por hora
+page-access,ページ別アクセス数,Page Access,Accès par page,Seitenzugriffe,Accesos por página,Accessi per pagina,Acessos por página
+page-access_memo,ページごとのアクセスを確認,View page access,Voir les accès par page,Seitenzugriffe anzeigen,Ver accesos por página,Visualizza accessi per pagina,Ver acessos por página
+ip-access,IPアドレス別アクセス数一覧,Access by IP Address,Accès par adresse IP,Zugriffe nach IP-Adresse,Accesos por dirección IP,Accessi per indirizzo IP,Acessos por endereço IP
+ip-access_memo,IPアドレスごとのアクセスを確認,View access by IP address,Voir les accès par adresse IP,Zugriffe nach IP-Adresse anzeigen,Ver accesos por dirección IP,Visualizza accessi per indirizzo IP,Ver acessos por endereço IP
+other,その他の機能,Other Features,Autres fonctionnalités,Weitere Funktionen,Otras funciones,Altre funzioni,Outras funções
+common_area,共通表示エリア,Common Display Area,Zone d'affichage commune,Gemeinsamer Anzeigebereich,Área de visualización común,Area di visualizzazione comune,Área de exibição comum
+common_area_memo,サイト全体で共通して使用する表示エリアのパーツを作成・管理します,Create and manage parts for display areas shared across the entire site.,Créer et gérer des composants pour les zones d’affichage communes à l’ensemble du site.,Erstellen und verwalten Sie Elemente für gemeinsam genutzte Anzeigebereiche der gesamten Website.,Cree y administre partes para áreas de visualización compartidas en todo el sitio.,Crea e gestisci parti per le aree di visualizzazione condivise dell'intero sito.,Crie e gerencie partes para áreas de exibição compartilhadas em todo o site.
+file_edit,ファイル管理,File Management,Gestion des fichiers,Dateiverwaltung,Gestión de archivos,Gestione file,Gestão de ficheiros
+file_memo,画像、PDF、音声、3Dファイル管理,"Manage images, PDFs, audio, and 3D files","Gestion des images, PDF, fichiers audio et 3D","Bilder, PDFs, Audio- und 3D-Dateien verwalten","Gestión de imágenes, PDF, audio y archivos 3D","Gestione di immagini, PDF, audio e file 3D","Gestão de imagens, PDFs, áudio e ficheiros 3D"
+audio_edit,音声管理,Audio Management,Gestion audio,Audioverwaltung,Gestión de audio,Gestione audio,Gestão de áudio
+audio_memo,mp3データの追加と削除,Add and delete MP3 files,Ajouter et supprimer des fichiers MP3,MP3-Dateien hinzufügen und löschen,Añadir y eliminar archivos MP3,Aggiungi ed elimina file MP3,Adicionar e eliminar ficheiros MP3
+glb_edit,3Dデータ管理,3D Data Management,Gestion des données 3D,3D-Datenverwaltung,Gestión de datos 3D,Gestione dati 3D,Gestão de dados 3D
+glb_memo,glbデータの追加とサムネール作成,Add GLB files and create thumbnails,Ajouter des fichiers GLB et créer des miniatures,GLB-Dateien hinzufügen und Vorschaubilder erstellen,Añadir archivos GLB y crear miniaturas,Aggiungi file GLB e crea miniature,Adicionar ficheiros GLB e criar miniaturas
+ai_logo,ロゴとカラー,Logo Set,Logo et couleurs,Logo und Farben,Logotipo y colores,Logo e colori,Logótipo e cores
+ai_struct,構造,Structure,Structure,Struktur,Estructura,Struttura,Estrutura
+ai_temp,テンプレート,Template,Modèle,Vorlage,Plantilla,Template,Modelo
+ai_navi,ナビゲーション,Navigation,Navigation,Navigation,Navegación,Navigazione,Navegação
+ai_page,ページ,Pages,Pages,Seiten,Páginas,Pagine,Páginas
+ai_content,コンテンツ,Content,Contenu,Inhalt,Contenido,Contenuto,Conteúdo
+ai_name,サイト名,Name,Nom du site,Website-Name,Nombre del sitio,Nome del sito,Nome do site
+ai_lang,言語,Language,Langue,Sprache,Idioma,Lingua,Idioma
+ai_indus,事業内容,Industry,Secteur d’activité,Branche,Sector,Settore,Setor
+ai_purpo,目的,Purpose,Objectif,Zweck,Objetivo,Scopo,Objetivo
+ai_targe,ターゲット,Target,Cible,Zielgruppe,Público objetivo,Target,Público-alvo
+ai_servi,サービス,Services,Services,Dienstleistungen,Servicios,Servizi,Serviços
+ai_ups,独自性,UPS,Unicité,Alleinstellungsmerkmal,Singularidad,Unicità,Diferencial
+ai_requi,必須ページ,Required,Pages requises,Erforderliche Seiten,Páginas obligatorias,Pagine obbligatorie,Páginas obrigatórias
+ai_memo,メニュー名をクリックすると、そのページのレイアウトプレビューが表示されます。サイトに不要な項目は、チェックを外して削除してください。ページは後から追加できるため、まずはシンプルな構成で始めることをお勧めします。,"Click a menu name to display the layout preview of the page.Uncheck items that are unnecessary for your site to remove them.You can add pages later, so it’s recommended to start with a simple structure.",Cliquez sur le nom d’un menu pour afficher l’aperçu de la mise en page de cette page. Décochez les éléments inutiles pour votre site afin de les supprimer. Vous pourrez ajouter des pages ultérieurement ; il est donc recommandé de commencer par une structure simple.,"Klicken Sie auf einen Menünamen, um die Layout-Vorschau der Seite anzuzeigen. Deaktivieren Sie Elemente, die für Ihre Website nicht benötigt werden, um sie zu entfernen. Seiten können später hinzugefügt werden, daher empfiehlt es sich, zunächst mit einer einfachen Struktur zu beginnen.","Haga clic en el nombre de un menú para mostrar la vista previa del diseño de esa página. Desmarque los elementos que no sean necesarios para su sitio para eliminarlos. Puede añadir páginas más adelante, por lo que se recomienda empezar con una estructura sencilla.","Fai clic sul nome di un menu per visualizzare l’anteprima del layout della pagina. Deseleziona gli elementi non necessari per il sito per rimuoverli. Potrai aggiungere pagine in seguito, quindi è consigliabile iniziare con una struttura semplice.","Clique no nome de um menu para apresentar a pré-visualização do layout da página. Desmarque os itens desnecessários para o seu site para os remover. Pode adicionar páginas mais tarde, por isso recomenda-se começar com uma estrutura simples."

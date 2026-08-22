@@ -1,0 +1,32 @@
+table.compare{
+    width:100%;
+    background:#FFF;
+    border-collapse: collapse;
+}
+
+table.compare tr th,
+table.compare tr td{
+	text-align: center;
+    border:1px solid #CCC;
+    padding:10px 5px;
+    font-size:14px;
+    font-weight: 700;
+    width:25%;
+}
+
+table.compare tr:nth-child(1) th{
+    background:#666;
+    color:#FFF;
+}
+
+
+table.compare tr th:nth-child(1){
+    background:#EEE;
+}
+
+
+
+table.compare tr:nth-child(1) th:nth-child(1){
+    border:none;
+    background:none;
+}

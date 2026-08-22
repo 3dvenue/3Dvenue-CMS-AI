@@ -1,0 +1,17 @@
+table.basic{
+    width:100%;
+    background:#FFF;
+    border-collapse: collapse;
+}
+
+table.basic tr th{
+    background:#F5F5F5;
+}
+
+table.basic tr th,
+table.basic tr td{
+    border:1px solid #ccc;
+    padding:7px 7px;
+    font-size:14px;
+}
+
