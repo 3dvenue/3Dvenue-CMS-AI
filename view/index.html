@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<title>3D Model Viewer</title>
+<style>
+html,
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+#model{
+    width:100%;
+    height:100%;
+    display:block;
+}    
+</style>
+</head>
+<body>
+<canvas id="model"></canvas>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+let currentModel = null;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 30);
+
+const canvas = $('#model')[0];
+
+const renderer = new THREE.WebGLRenderer({
+    canvas,
+    antialias:true,
+    preserveDrawingBuffer:true
+});
+
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
+
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.aspect = window.innerWidth / window.innerHeight;
+camera.updateProjectionMatrix();
+
+// renderer.setSize(400, 400);
+renderer.setClearColor(new THREE.Color(0xe5e5e5));
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableRotate = true;
+controls.enablePan = true;
+controls.enableZoom = true;
+controls.zoomSpeed = 0.3;
+controls.panSpeed = 0.5;
+controls.rotateSpeed = 0.5;
+
+controls.mouseButtons = {
+  LEFT: THREE.MOUSE.PAN,
+  MIDDLE: THREE.MOUSE.DOLLY,
+  RIGHT: THREE.MOUSE.ROTATE
+};
+
+const ambient = new THREE.AmbientLight(0xFFFFFF, 1.2);
+scene.add(ambient);
+
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
+dirLight.position.set(10, 10, 10);
+dirLight.castShadow = true;
+dirLight.shadow.mapSize.width = 2048;
+dirLight.shadow.mapSize.height = 2048;
+dirLight.shadow.camera.left = -10;
+dirLight.shadow.camera.right = 10;
+dirLight.shadow.camera.top = 10;
+dirLight.shadow.camera.bottom = -10;
+dirLight.shadow.camera.near = 0.5;
+dirLight.shadow.camera.far = 50;
+scene.add(dirLight);
+
+
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0xdddddd, 1.2);
+scene.add(hemiLight);
+
+// スポットライトの設定
+const spotLight = new THREE.SpotLight(0xffffff, 100);
+spotLight.castShadow = true;
+spotLight.position.set(3, 7, 3);
+spotLight.angle = Math.PI / 6;
+spotLight.penumbra = 0.8;
+scene.add(spotLight);
+
+    var stageGeometry = new THREE.CircleGeometry(30,64);
+    var stageMaterial = new THREE.MeshStandardMaterial({
+    color:0xFFFFFF});
+
+    var stage = new THREE.Mesh(stageGeometry,stageMaterial);
+    stage.receiveShadow = true;
+    stage.name = 'stage';
+    stage.scale.x = 1;
+    stage.scale.y = 1;
+    stage.rotation.x = -0.5 * Math.PI;
+    stage.rotation.y = 0;
+    scene.add(stage);
+
+    // カメラの位置と注視点を設定
+    camera.position.set(0, 1.5, 3);
+    camera.lookAt(0, 0.8, 0);
+    controls.target.set(0, 0.5, 0);
+    controls.update();
+
+    function loadGLTFModel(model){
+        if(currentModel){
+            scene.remove(currentModel);
+        }
+
+        const loader = new GLTFLoader();
+
+        loader.load(model, function(gltf){
+            currentModel = gltf.scene;
+
+            currentModel.traverse((object) => {
+                if(object.isMesh){
+                    object.material.metalness = 0.5;
+                    object.geometry.computeVertexNormals();
+                    object.castShadow = true;
+                    object.receiveShadow = true;
+                }
+            });
+
+            scene.add(currentModel);
+        });
+    }
+
+    window.loadGLTFModel = loadGLTFModel;
+
+    function animate(){
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+function resize(){
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    renderer.setSize(w, h);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+}
+
+resize();
+
+window.addEventListener('resize', resize);
+</script>
+</body>
+</html>

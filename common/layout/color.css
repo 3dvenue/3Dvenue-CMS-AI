@@ -1,0 +1,34 @@
+body{background:#ffffff;}
+
+header{background:#FFF;}
+header h1{color:#4D4D4D;}
+
+nav,nav ul{background:#000;}
+nav a{color:#FFF;}
+
+main h1{color:#333333;}
+
+main h2{color:#333333;}
+
+main h3{color:#333333;}
+
+main h4{color:#333333;}
+
+main .text{color:#333333;}
+main p{color:#333333;}
+main span{color:#333333;}
+
+main a{color:#0E11E9;}
+
+main a.button1{
+background:#FFFFFFee;
+color:#333333;
+border:1px solid #0000001D;
+}
+main a.button2{
+background:#cccccc;
+color:#333333;
+}
+
+footer{background:#000000;}
+footer *{color:#FFFFFF;}
