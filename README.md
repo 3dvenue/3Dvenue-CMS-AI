@@ -1,103 +1,129 @@
+[Uploading README (1).md…]()
 [README.md](https://github.com/user-attachments/files/31329903/README.md)
 # 3Dvenue-CMS-AI
 
-超軽量・高速表示・AI組み込みを特徴とした、小規模サイト向けの軽量CMSです。
-JavaScriptに依存しない設計思想のもと、PageSpeed Insights全項目100点を目指すコンセプトで開発されています。
+An ultra-lightweight, high-speed, AI-powered CMS built for small-scale websites.
+Designed with a JavaScript-free philosophy, aiming for a perfect 100 score across every category in PageSpeed Insights.
 
-- Zip圧縮時 **200KB以下**
-- 公開用プログラムは **index.php 1枚(5KB未満)**
-- DBサーバー不要の **SQLite** 採用
-- サイト完成後は **CMS自体が不要** になる設計
-- **MITライセンス**
-
----
-
-## 特徴
-
-### 超軽量
-zipファイルで200KB以下。
-
-### 高速表示
-PageSpeed Insightsで全項目100点を目指すことをコンセプトにしたCMSです。
-
-### パーツ作成機能
-- **Section パーツ**:自分で設計できるほか、AIが作ったパーツをエディター画面からAssetできます。
-- **エレメントパーツ**:個別に欲しい部品を作っておけます。
-- **ページパーツ**:作り込んだページのレイアウトを、エディター画面からそのままAssetできます。
-
-一度作ったパーツは使い回せるので、使うほどに自分専用のCMSに育っていきます。
-
-### テンプレート作成機能
-凝ったレイアウトをあらかじめ登録しておけます。テンプレートを増やすほど、自分専用のCMSに育っていきます。
-
-### mp3アップロード
-mp3ファイルをアップロードして、外部サーバーに依存せず音声再生ができます。
-
-### 3Dデータビューアー
-標準でglbデータをアップロードでき、外部に依存せず公開できます。
-
-### エディターはselectではなくinput
-設定できる項目自体は多いものの、ほとんど使わずに済みます。プルダウンは初心者には便利ですが、慣れている人には直接入力の方が速い場面が多くあります(例:色指定は「red」と入力してEnterする方が、カラーピッカーをクリックするより数段速い)。
-
-### テーブルエディター機能
-週間スケジュール・会社概要・遠隔対応表など、種類別にテーブルを選択できます。よそのサイトから作ってコピペしていた作業から解放されます。気に入ったパーツはAssetしておけばすぐに呼び出せます。
-
-### HTMLエディター機能
-エレメント選択と同時に、そのエレメント専用のHTMLエディターが開きます。ワード等からのコピー&ペーストで無駄なHTMLが大量に付いてしまっても、このHTMLエディターに流し込めばただのテキストになるため、クリアーの手間が省けます。`<br>`タグで好きな位置に強制改行も入れられます。逆にリンクを張ったテキストであれば、エディター画面からエレメント側に直接貼り付けることで、そのままリンクを生かすこともできます。用途に応じて自由に使い分けられます。
-
-### JSとCSS
-開いているページだけで使いたいJS/CSSは、ページ移動なしでエディター画面から入力できます。JSはエディター画面内では実行されない設計になっており、誤ってリダイレクトの記述を入れてしまっても編集画面自体は破綻しません。結果はプレビューボタン一つで確認できます。
-
-### SEO設定
-SEO設定もページ移動不要です。エディター画面の歯車マークから、PageSpeed Insightsが指摘する対策のほとんどを設定できます。構造化データなどはAIにページを読み込ませて作らせたものをコピペするだけで完了します。みんなでサステナブルのためにAll100を目指しましょう。
-
-### AIの組み込み
-3Dvenue-CMS-AIは、AIに極力負担をかけず失敗の少ない **WAIstyle** を採用しています。顧客と制作業者のやり取りをシミュレーションする形で進められ、破綻しにくい構成のため、最短15分程度でプロトタイプが作れます。AIにすべて任せても最後の仕上げは人間が時間をかけて修正することになるため、プロンプトを練る時間があるなら直接変更した方が早いことが多い、という考え方に基づいています。
-
-### 公開後はCMSが不要
-サイトが完成した後もログイン画面をそのまま残しておくのは不安が残るものです。3Dvenue-CMSはサイト完成後、CMS自体が不要になる設計です。FTP側でバックアップを取れば削除でき、心配事が一つ減ります。
-
-### ログインのアカウントとパスワード
-アカウント・パスワードには2バイト文字が使えます。全角の空白も立派なパスワードになります。アカウントがメールアドレスである必要もなく、任意の文字列で構いません。これが標準仕様のため、総当たり攻撃が意味をなさなくなります(SSL接続は必須です)。
-
-### 公開用のプログラム
-公開用のプログラムファイルは `index.php` 1枚のみで、5KB未満。改行なしで書き出すと80行程度しかありません。これが高速動作の秘密の一つです。
-
-### ドメインもディレクトリも選ばない
-FTPでアップロードした場所がそのまま公開先のルートになります。`/test/` で完成させたものを `/open/` に書き換えれば、その場でそのまま `/open/` 配下で動作を始めます。
-
-### DBはSQLite
-スマホアプリでもおなじみのSQLiteを採用。MySQLのようなDBサーバーを使わないため、DBサーバー側の負荷はゼロです。公開時はSELECT1回だけでページが構成されるため、これも表示速度が高速な理由の一つです。
-
-### AIと相性の良いプログラム
-主要なPHPファイルは20枚程度、最小0.4KB〜最大7KB程度。AIに全体を読み込ませて改良することも容易なサイズです。それぞれのファイルがほぼ独立しており、CSSもJSも基本的に1ファイル内で完結しているため、全体を見渡したカスタマイズもすぐに行えます。
-
-### 小規模サイトに向いています
-推奨ページ数は30ページ程度までを想定しており、中小規模のサイト構築に向いています。ブログ機能が不要であれば、部署ごとにディレクトリを分けて複数のCMSを管理したり、ちょっとしたカスタマイズで別ディレクトリの情報をページ内に読み込ませたりすることも簡単に行えます。
-
-### 画像の保存
-アップロードした画像はすべて標準でWebPに変換されます。AVIFにも今後対応を予定しています。
-
-### まだまだ改良の余地があります
-公開したばかりのプロジェクトです。今後は利用者の要望を聞きながら改良していく予定です。すでにリリース前のRedditでのアドバイスをもとに対応済みの箇所もあります。あなたの提案が反映されることもあります。
-
-### 画像の利用状況
-画像編集画面でクリックすると、その画像が使われているページと件数を確認できます。削除して良いかどうかの判断がしやすくなっています。
-
-### アクセス解析機能
-外部サービスを使わないアクセス解析機能を標準搭載。日別・時間別・ページ別・IPアドレス別まで確認できます。余計なスクリプトを読み込む必要がありません。
-
-### コンテンツはすべてsectionで構成
-すべてのコンテンツをsection単位で構成しています。今後のバージョンアップで、サイト内のコンテンツをMarkdown形式で一括取得できるようにする予定です。AIとの相性が良く、カタログ作成などにも活用できる見込みです。
+- **Under 200KB** zipped
+- The public-facing program is a **single `index.php` file (under 5KB)**
+- Runs on **SQLite** — no database server required
+- Designed so that **the CMS itself becomes unnecessary** once the site is finished
+- **MIT licensed**
 
 ---
 
-## ライセンス
+## Features
+
+### Ultra-lightweight
+
+Under 200KB as a zip file.
+
+### Fast page loads
+
+Built around the goal of hitting a perfect score across every category in PageSpeed Insights.
+
+### Parts creation
+
+- **Section parts**: design your own, or save AI-generated parts as assets directly from the editor.
+- **Element parts**: save individual components you want to reuse.
+- **Page parts**: save a fully built page layout as an asset straight from the editor.
+
+Parts you create can be reused anywhere, so the CMS grows into a personalized toolkit the more you use it.
+
+### Template creation
+
+Save elaborate layouts in advance. The more templates you build, the more the CMS becomes tailored to you.
+
+### MP3 upload
+
+Upload MP3 files and play audio without relying on an external server.
+
+### 3D data viewer
+
+Upload `.glb` files natively and publish them without any external dependency.
+
+### Inputs instead of dropdowns in the editor
+
+There are plenty of configurable settings, but you'll rarely need most of them. Dropdowns are convenient for beginners, but for experienced users, direct input is often faster — for example, typing "red" and hitting Enter beats clicking through a color picker.
+
+### Table editor
+
+Choose from categorized table types — weekly schedules, company profiles, remote-support tables, and more — freeing you from copy-pasting tables built elsewhere. Save your favorite parts as assets for instant reuse.
+
+### HTML editor
+
+Selecting an element opens a dedicated HTML editor for that element. If pasting from Word or similar tools drags in a mess of extra markup, running it through this HTML editor strips it down to plain text, saving you the cleanup. You can force a line break anywhere with a `<br>` tag. Conversely, if you paste text that already contains a link, pasting it directly into the element preserves the link. Use whichever approach fits the situation.
+
+### JS and CSS
+
+Page-specific JS/CSS can be entered directly from the editor without leaving the page. JS is never executed inside the editor itself, so even an accidental redirect script won't break the editing screen — just hit preview to see the result.
+
+### SEO settings
+
+SEO settings are also handled without leaving the page. From the gear icon in the editor, you can configure most of what PageSpeed Insights flags. For things like structured data, just have an AI read the page and generate it, then paste it in. Let's all aim for a perfect 100 together, sustainably.
+
+### Built-in AI
+
+3Dvenue-CMS-AI uses **WAIstyle**, an approach designed to minimize the burden on the AI and reduce failure cases. It works by simulating a conversation between a client and a web producer, which keeps the process robust — prototypes can be ready in as little as 15 minutes. The underlying idea: even if you hand everything to the AI, a human still has to spend time on the final polish — so if you're going to spend time crafting a prompt anyway, it's often faster to just edit directly.
+
+### No CMS needed after launch
+
+Leaving a login screen live after a site is finished is never entirely comfortable. 3Dvenue-CMS is designed so the CMS itself becomes unnecessary once the site is complete — back it up over FTP, then delete it, and that worry is gone.
+
+### Login accounts and passwords
+
+Accounts and passwords support double-byte (multi-byte) characters — even a full-width space is a valid password. The account doesn't need to be an email address either; any string works. Because this is the default, brute-force attacks lose their effectiveness (an SSL connection is required).
+
+### The public-facing program
+
+The only file needed for the live site is a single `index.php`, under 5KB — about 80 lines with line breaks stripped. That's part of the secret to its speed.
+
+### No fixed domain or directory
+
+Wherever you upload it over FTP becomes the site root. Finish building under `/test/` and rename it to `/open/`, and it starts running under `/open/` immediately, as-is.
+
+### SQLite for the database
+
+Uses SQLite, the same engine many mobile apps rely on. Since there's no MySQL-style database server, there's zero load on a DB server. On the live site, a page is assembled with a single SELECT — another reason it's fast.
+
+### AI-friendly codebase
+
+The core is about 20 PHP files, ranging from 0.4KB to 7KB each — small enough for an AI to read the whole thing and make improvements. Each file is largely self-contained, with its CSS and JS typically living inside that same file, so you can make sweeping customizations quickly.
+
+### Built for small sites
+
+Recommended for sites up to around 30 pages — a good fit for small and mid-sized site builds. If you don't need blogging features, it's easy to split departments into separate directories and manage multiple CMS instances, or pull in content from another directory with a small customization.
+
+### Image storage
+
+All uploaded images are automatically converted to WebP. AVIF support is planned for the future.
+
+### Still very much a work in progress
+
+This is a freshly released project. It will keep improving based on user feedback — some fixes already made it in based on pre-release advice from Reddit. Your suggestions might make it in too.
+
+### Image usage tracking
+
+Clicking an image in the image editor shows which pages it's used on and how many times, making it easy to judge whether it's safe to delete.
+
+### Built-in analytics
+
+Comes with analytics that don't rely on any external service — daily, hourly, per-page, and per-IP breakdowns, all without loading extra scripts.
+
+### All content built from sections
+
+All content is structured section by section. A future update will make it possible to export a site's entire content in Markdown format in one go — a good fit for AI use cases like catalog generation.
+
+---
+
+## License
 
 MIT License
 
 ---
 
-## フィードバック
+## Feedback
 
-不具合報告や改善提案を歓迎します。Issueやプルリクエストからお気軽にどうぞ。
+Bug reports and improvement suggestions are welcome — feel free to open an issue or a pull request.
+
