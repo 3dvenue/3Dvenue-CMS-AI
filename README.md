@@ -1,5 +1,3 @@
-[Uploading README (1).md…]()
-[README.md](https://github.com/user-attachments/files/31329903/README.md)
 
 I’m sorry for the inconvenience. I forgot to include the .htaccess file, and the CMS will not work without it.  
 Previously, I also forgot that GitHub often fails to upload the .htaccess file.
