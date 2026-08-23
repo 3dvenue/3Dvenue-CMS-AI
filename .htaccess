@@ -1,0 +1,15 @@
+<Files "3d_venue_data.qox">
+Require all denied
+</Files>
+
+RewriteEngine On
+#RewriteBase /
+# 1. 実在するファイル（CSS/画像）ならそのまま出す
+RewriteCond %{REQUEST_FILENAME} !-f
+# 2. 実在するディレクトリならそのまま出す（管理画面など）
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .? - [L]
+# 3. それ以外（仮想URL）はすべて index.php へ
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?slug=/$1 [L,QSA]
