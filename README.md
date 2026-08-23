@@ -122,7 +122,18 @@ All content is structured section by section. A future update will make it possi
 
 ## License
 
-MIT License
+### 3DVenue-CMS-AI  
+3DVenue-CMS-AI is a lightweight and high-performance CMS focused on simplicity, speed, and flexible deployment.  
+
+Copyright (c) 2026 Yoshihiro Murai Released under the MIT License. [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
+
+## Third-Party Libraries
+
+- jQuery (MIT License) [https://jquery.com/](https://jquery.com/?utm_source=chatgpt.com)
+- jQuery UI (MIT License) [https://jqueryui.com/](https://jqueryui.com/?utm_source=chatgpt.com)
+- Tabler Icons (MIT License) [https://tabler.io/icons](https://tabler.io/icons)
+- Three.js (MIT License) [https://threejs.org](https://threejs.org/)
+- PDF.js (Apache License 2.0) [https://mozilla.github.io/pdf.js/](https://mozilla.github.io/pdf.js/)
 
 ---
 
