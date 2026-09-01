@@ -13,6 +13,7 @@ Designed with a JavaScript-free philosophy, aiming for a perfect 100 score acros
 ### ▶️ YouTube Channel Update
 **https://www.youtube.com/@3DVenue**
 ---
+## Version History
 
 ## v1.2.0
 **Released: September 1, 2026**
