@@ -1,0 +1,133 @@
+/* 3Dvenue-CMS Copyright (c) 2026 yoshihiro Murai Licensed under MIT (https://opensource.org/licenses/MIT)*/
+
+html {
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+    font-size: 16px;
+    height:100%;
+}
+
+body{
+	height:100%;
+	background:#F4F5F6;
+	min-width:880px;
+}
+
+body * {
+	font-family: "Segoe UI", "Meiryo", sans-serif;
+    line-height: 1.5;
+    color:#333;
+}
+
+h1,h2,h3,h4{
+	letter-spacing: .1em;
+}
+
+p {
+	font-size: 14px;
+}
+
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+.inner{
+	width:100%;
+	max-width:1400px;
+	padding:0 40px;
+	margin:0 auto;
+}
+
+.btn{
+	padding:5px 20px;
+	background:#feab64;
+	color:#FFF;
+	border:none;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.close{
+	position:absolute;
+	top:0;
+	right:0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.0;
+	background:#000;
+	color:#FFF;
+	font-weight: 500;
+	font-size:20px;
+	width:30px;
+	height:30px;
+	cursor: pointer;
+}
+
+/* main
+-------------------------------------------*/
+
+#main {
+	min-height:calc(100vh - 70px);
+	padding:0 0 10px;
+}
+
+#main .inner{
+	max-width:1400px;
+}
+
+#main .inner #new{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.0;
+	background:#000;
+	color:#FFF;
+	font-weight: 500;
+	font-size:20px;
+	width:40px;
+	height:40px;
+	cursor: pointer;
+}
+
+#main h1{
+	font-size:24px;
+	font-weight:700;
+	color:#1A2434;
+}
+
+#main h2{
+	position: relative;
+	color:#1A2434;
+	padding:15px 0 10px;
+	font-size:18px;
+}
+
+#main h3,
+#main h4{
+	color:#1A2434;
+}
+
+
+#main section h3{
+	width:100%;
+	margin-bottom:20px;
+}
+
+/* footer 
+-------------------------------------------*/
+
+#footer{
+	font-size:14px;
+	width:100%;
+}
+
+#footer .inner{
+	height:50px;
+	display: flex;
+	align-items: center;
+}

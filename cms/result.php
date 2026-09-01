@@ -186,11 +186,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         - Use the language specified in the site settings.
         - Return only the completed HTML to be inserted inside <main>.
 
-        Final design validation:
+        Content source priority:
 
-        - Whenever a background color is specified for a section or content block, verify the contrast of all text inside it.
-        - If the background is dark, use sufficiently light text colors for headings, paragraphs, links, and other text elements.
-        - If sufficient contrast cannot be guaranteed, do not specify the background color.
+        - If markdown content is provided, treat it as the primary and authoritative source for the page content.
+        - Do not add factual information that is not contained in the markdown.
+        - Do not contradict, replace, reinterpret, or expand factual information contained in the markdown.
+        - Site settings, page description, purpose, target, and other contextual information may be used only to organize, present, and design the markdown content.
+        - If the markdown does not contain enough information to create the page, supplement only what is strictly necessary.
+        - If no markdown content is provided, generate the page content from the site settings, page description, and other provided information as usual.
+        - Markdown is source material only. The final output must still be HTML only.
         ';
     }
 
@@ -222,6 +226,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             Do not add any explanations about the colors.
             Focus only on rewriting the color values of the existing properties inside "color".
             Whenever you change a background color, you must also check and adjust the existing text color properties used on that background to ensure sufficient contrast.
+
+            Content priority:
+
+            - If markdown content is provided, use it as the highest-priority source for the page content.
+            - Do not contradict, replace, or invent information that conflicts with the markdown content.
+            - Use the site settings, page description, and site purpose only to supplement information that is missing from the markdown content.
+            - If no markdown content is provided, generate the page content from the site settings, page description, and site purpose as usual.
             ';
     }
 
@@ -289,7 +300,7 @@ if ($ai == 'gemini') {
 if($ai == 'claude'){
     $data = [
         'model'      => $aiselect, // 例: 'claude-sonnet-4-6'
-        'max_tokens' => 4000,      // Anthropicは必須パラメータ
+        'max_tokens' => 10000,      // Anthropicは必須パラメータ
         'messages'   => [
             [
                 'role'    => 'user',

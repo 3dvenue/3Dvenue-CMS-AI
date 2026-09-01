@@ -204,6 +204,7 @@ include_once('./lang.php');
     <div class="inner">
 
         <div id="tools">
+            <div id="aiImport" title="Import AI HTML">✨</div>
             <div id="scriptBtn">Script</div>
             <div id="styleBtn">Styles</div>
         </div>
@@ -259,6 +260,31 @@ include_once('./lang.php');
         </div><!-- #scroll_body -->
 
     <!-- CSS,JS,HTML -->
+        <div id="ImportMain" class="bottompopup"><span class="hadle"></span>
+            <h3>
+                <p>Import AT HTML</p>
+                <p class="close">✕</p>
+            </h3>
+            <p>
+<strong>完成したHTMLを一括で&lt;main&gt;に取り込む機能です。</strong><br>
+AIなどで制作した完成済みのHTMLデータを取り込む場合は、生成時のプロンプトに以下の条件を含めてください。
+</p>
+<ul class="prompto">
+<li>3Dvenue-CMSに取り込むため、個々のコンテンツはすべて<br>
+    &lt;section class=""&gt;&lt;div class="inner"&gt;&lt;/div&gt;&lt;/section&gt;で囲うこと。</li>
+<li>ページコンテンツはすべて&lt;main&gt;タグの中に記載すること。</li>
+<li>@mediaを書かなくて済むように「CSS」は可能な限りインラインで記述すること。</li>
+</ul>
+
+<p>
+<strong>HTMLを張り付け</strong><br>
+mainの中身だけを張り付けてください※mainは含みません
+</p>
+
+            <textarea class="codearea" name="aihtmlarea"><?=$js?></textarea>
+            <div class="btn"><?=$lang['save'][$lng]?></div>
+        </div>
+
         <div id="js" class="bottompopup"><span class="hadle"></span>
             <h3>
                 <p>Javascript</p>
@@ -1283,6 +1309,13 @@ const sns_img = '<?=$sns_img?>';
             case 'styleBtn':
                 $('#css').addClass('active');
             break;
+            case 'aiImport':
+                var $html = $('<div>').html($('#body main').html().trim());
+                $html.find('[data-tag]').removeAttr('data-tag');
+                var html = $html.html();
+                $('#ImportMain textarea').val(html);
+                $('#ImportMain').addClass('active');
+            break;
         }
         $('body').removeClass();
         $('#sideeditor').removeClass('active');
@@ -1317,6 +1350,19 @@ const sns_img = '<?=$sns_img?>';
                 data: js
             }, function(res){
                 $('#js').removeClass('active');
+         });
+    })
+
+
+    $('#ImportMain .btn').on('click',function(){
+        let js = $('#ImportMain textarea').val();
+            $.post('sqlupdate.php', {
+                pid: '<?=$pid?>',
+                table: 'pages',
+                column: 'main',
+                data: js
+            }, function(res){
+                location.reload();
          });
     })
 

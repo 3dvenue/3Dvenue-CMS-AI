@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if($submit == 'makePage'){
-        $index = $_POST['index'] ?? '0';
+        $index = $_POST['index'] ?? '1';
         $name = $_POST['name'] ?? '';
         $desc = $_POST['desc'] ?? '';
         $page = '<section><div class="inner"><h2>'.$name.'</h2><div class="text">'.$desc.'</div></div></section>';
@@ -485,7 +485,7 @@ include_once('./lang.php');
     #aiprompt.unknown,
     main.unknown *{
         color:#999;
-        background:#ccc;
+        /*background:#ccc;*/
     }
 
     main.unknown iframe{
@@ -1003,7 +1003,7 @@ include_once('./lang.php');
     list-style: none;
     background:#FFF;
     border:1px solid #ddd;
-    height:calc(100% - 150px);
+    height:calc(100% - 250px);
     overflow-y:auto;
 }
 
@@ -1254,6 +1254,84 @@ include_once('./lang.php');
     pointer-events: none;
     user-select: none;
 }
+
+#closePrompt,
+#addMarkdown{
+    margin:10px 0;
+    text-align: right;
+}
+
+#addMarkdown button{
+    background:#EDF2FA;
+    border:1px solid #D3E3FC;
+    border-radius: 7px;
+    cursor: pointer;
+    color:#474747;
+    padding:5px 10px;
+}
+
+#closePrompt button{
+    background:#333;
+    color:#FFF;
+    border-radius: 7px;
+    cursor: pointer;
+    padding:5px 10px;
+    border:none;
+}
+
+#prompto{
+    position:fixed;
+    padding:10px 40px;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#FFF;
+    box-shadow: 3px 3px 10px #0003;
+    z-index: 100;
+    transition-duration: 0.3s;
+    transform: scale(1.0,0.0);
+    transform-origin: bottom center;
+    opacity:0;
+    pointer-events: none;
+}
+
+#prompto.active{
+    transform: scale(1.0,1.0);
+    opacity:1;
+    pointer-events:auto;
+}
+
+#prompto h2{
+    margin:0 0 0.5em;
+}
+
+#prompto p{
+    font-size:14px;
+    line-height: 1.75;
+    max-width: 800px;
+}
+
+#prompto p span{
+    font-size:12px;
+    color:#000;
+}
+
+textarea#markdown{
+    width: 100%;
+    height: calc(100% - 250px);
+    padding: 10px 20px;
+    border: 1px solid #D3E3FC;
+    line-height: 1.2;
+    resize: none;
+    font-size: 14px;
+    font-family: Consolas;
+    background: #303841;
+    color: #EEF;
+    tab-size: 4;
+    border-radius:7px;
+}
+
 </style>
 <title>AI Editor Assistant</title>
 </head>
@@ -1405,7 +1483,6 @@ include_once('./lang.php');
                <div class="btnBox"><button type="button" id="makeNavi">MAKE NAVIGATION</button></div>
             </div>
 
-
             <div id="setting" class="prompt">
                 <h3>Make Page</h3>
                 <div id="basic">
@@ -1422,6 +1499,7 @@ include_once('./lang.php');
                     <div for="services"><span>Services</span><span id="services"></span></div>
                     <div for="usp"><span>USP</span><span id="usp"></span></div>
                 </div>
+                <div id="addMarkdown"><button id="addPrompto">add Prompto</button></div>
                 <div class="btnBox"><button type="button" id="makeContent">MAKE CONTEBTS</button></div>
                 <div id="content-archive">
                     <ul id="content-list"></ul>
@@ -1493,7 +1571,22 @@ include_once('./lang.php');
             </div>
         </div><!-- aibox -->
     </div><!-- inner -->
+
+<div id="prompto">
+    <h2>Add Prompto</h2>
+    <p>
+        掲載する内容が決まっている場合は、このエリアに貼り付けてください。AIが最優先の情報としてコンテンツを作成します。
+        Markdown形式で入力すると、より正確に内容を伝えることができます。
+        Markdown形式がわからない場合は、元の資料をAIに添付して「Markdown形式にまとめて」と指示すれば簡単に作成できます。<br>
+        <span>※Markdownはテキスト形式なので、テキストエディターなどで簡単に編集できます。</span>
+    </p>
+    <textarea id="markdown" placeholder="Markdown Text..."></textarea>
+    <div id="closePrompt"><button id="setpronpt">Setting</button></div>
+</div>
+
 </main>
+
+
 <div id="loading" class="thinking">
 <h3>GENERATING...</h3>
 <p>AI is working hard for you.</p>
@@ -1550,7 +1643,7 @@ $(function(){
         })
   })
 
-    $('#template,#navi,#page').on('click',function(){
+    $('#template,#navi,#page,#kosei').on('click',function(){
         if ($('#selectAi input:checked').length === 0) {
           $('#selectAi').css({'outline':'2px solid red'});
         }
@@ -1826,6 +1919,11 @@ $(function(){
         });
     });
 
+
+    $('#addPrompto,#setpronpt').on('click',function(){
+        $('#prompto').toggleClass('active');        
+    })
+
     $('#sectionedit').on('input',function(){
         let html = $(this).val().trim();
         $('#right iframe').contents().find('main .active').html(html);
@@ -1907,6 +2005,7 @@ $(function(){
         let pid = $('#p').val();
         let pagename = $('#pagename').val();
         let pagedescription = $('#pagedescription').val();
+        let markdown = $('#markdown').val().trim();
         let structures = $.get('ai/setting.txt?t=' + Date.now());
         let html = $.get('common/layout/default.html?t=' + Date.now());
         let css = $.get('common/layout/default.css?t=' + Date.now());
@@ -1917,6 +2016,7 @@ $(function(){
             pagename: pagename,
             description: pagedescription,
             structures: structures,
+            markdown:markdown,
             html: html,
             css: css,
             color:color
@@ -2001,7 +2101,7 @@ $(function(){
             submit: 'makeNavi',
             json: JSON.stringify(pages)
         }, function(res){
-            // console.log(res);
+            console.log(res);
             // location.reload();
         });
 
