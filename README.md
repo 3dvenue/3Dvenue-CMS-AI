@@ -10,6 +10,9 @@ Designed with a JavaScript-free philosophy, aiming for a perfect 100 score acros
 - **MIT licensed**
 
 ---
+### YouTube Channel Update
+https://www.youtube.com/@3DVenue
+---
 
 ## v1.2.0
 **Released: September 1, 2026**
