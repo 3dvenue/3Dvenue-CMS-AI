@@ -10,7 +10,7 @@ Designed with a JavaScript-free philosophy, aiming for a perfect 100 score acros
 - **MIT licensed**
 
 ---
-### YouTube Channel Update
+### ▶️ YouTube Channel Update
 **https://www.youtube.com/@3DVenue**
 ---
 
