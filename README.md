@@ -11,7 +11,7 @@ Designed with a JavaScript-free philosophy, aiming for a perfect 100 score acros
 
 ---
 ### YouTube Channel Update
-https://www.youtube.com/@3DVenue
+**https://www.youtube.com/@3DVenue**
 ---
 
 ## v1.2.0
