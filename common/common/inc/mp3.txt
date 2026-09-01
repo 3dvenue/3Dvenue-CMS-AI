@@ -1,0 +1,30 @@
+
+<script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js" defer></script>
+<script>
+document.querySelectorAll('.audio .player span').forEach(span => {
+    span.addEventListener('click', function(){
+        let player = this.closest('.player');
+        player.innerHTML = `<div class="wave"></div>
+        <div class="vol">
+        <span><img src="./common/svg/volume.svg" alt="volume"></span>
+        <div class="val">
+        <input type="range" class="volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        </div>`;
+        let ws = WaveSurfer.create({
+            container: player.querySelector('.wave'),
+            waveColor: '#999',
+            progressColor: '#333',
+            height: 40
+        });
+        ws.load('./common/mp3/' + this.dataset.name);
+        ws.setVolume(0.5);
+        player.querySelector('.wave').onclick = () => ws.playPause();
+        player.querySelector('.volume').oninput = e => {
+            ws.setVolume(e.target.value);
+        };
+    });
+
+});
+</script>
+
