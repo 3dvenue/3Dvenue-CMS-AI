@@ -28,6 +28,18 @@ Designed with a JavaScript-free philosophy, aiming for a perfect 100 score acros
 - Significantly redesigned the Parts creation interface to support the expanded Asset functionality.
 
 ## v1.0.0 release
+
+## Roadmap
+**v1.5 — Content Export**
+- Export website content section by section and download it in Markdown or JSON format.
+- The exported data can be used with AI to create brochures, company profiles, PDFs, and other materials.
+
+**v2.0 — No-Code Virtual Exhibition Booths**
+
+- Create virtual exhibition booths without coding, using the data exported in v1.5.
+- Booths will be provided as GLB files containing JSON-based data, allowing them to be passed to AI tools or customized into more sophisticated designs by game creators and 3D developers.
+- Content stored in userData will support interactive features such as video playback and PDF downloads.
+
 ---
 
 ## Features
