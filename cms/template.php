@@ -368,6 +368,9 @@ main.tb iframe{
     display:none;
 }
 
+#preview.drag{
+    pointer-events:none;
+}
 
 </style>
 </head>
@@ -523,6 +526,7 @@ $(function(){
     // js and css updown 
     $('span.hadle').on('mousedown', function(e) {
         e.preventDefault();
+        $('#preview').addClass('drag');
         let targetPopup = $(this).closest('#textEditor');
         $(document).on('mousemove.resizer', function(moveEvent) {
             let h = $(window).height() - moveEvent.clientY;        
@@ -531,6 +535,7 @@ $(function(){
             }
         });
         $(document).one('mouseup', function() {
+            $('#preview').removeClass('drag');
             $(document).off('mousemove.resizer');
         });
     });

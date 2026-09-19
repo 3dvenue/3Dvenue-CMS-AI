@@ -1,6 +1,6 @@
 <?php
 /* 3Dvenue-CMS Copyright (c) 2026 yoshihiro Murai Licensed under MIT (https://opensource.org/licenses/MIT)*/
-$db_file = __DIR__ . '/../../3d_venue_data.qox';
+$db_file = __DIR__ . '/../../3d_venue_data.db';
 try {
     // 接続オプション（リトライ設定 5秒）
     $options = [

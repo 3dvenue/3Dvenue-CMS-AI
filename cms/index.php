@@ -386,7 +386,7 @@ include_once('./lang.php');
             sessionStorage.setItem('content', $(this).attr('href'));
         });
 
-        $('#menu,#naviclose').on('click',function(){
+        $('#menu,#naviclose,#contents ul li').on('click',function(){
             $('#indexwrap').toggleClass('wide');            
         })
 

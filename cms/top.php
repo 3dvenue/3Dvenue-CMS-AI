@@ -423,7 +423,7 @@ section#rootcheck p{
         <h2>Site Information</h2>
         <table>
             <tr><th>CMS Root<th><td><a href="<?=$root?>" target="_blank"><?=$root?></a><td></tr>
-            <tr><th>CMS Version<th><td>1.2.0-RELEASE<td></tr>
+            <tr><th>CMS Version<th><td>1.2.5-RELEASE<td></tr>
             <tr><th>PHP Version<th><td><?=phpversion()?><td></tr>
             
         </table>
@@ -518,6 +518,10 @@ section#rootcheck p{
 
         $('a').on('click', function(){
             parent.sessionStorage.setItem('content', $(this).attr('href'));
+        });
+
+        $('#analog a,#technical a').on('click',function(){
+            parent.$('#indexwrap').addClass('wide');
         });
 
         $('#language').on('change',function(){

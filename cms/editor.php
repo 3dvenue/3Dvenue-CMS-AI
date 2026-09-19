@@ -94,11 +94,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         exit;
     }
 
-    $pid = $_GET['pid'] ?? '0';
+    $pid = $_GET['pid'] ?? null;
+
+    if ($pid === null) {
+        include_once('../common/inc/dbcall.php');
+        $sql = "SELECT pid FROM pages ORDER BY pid LIMIT 1";
+        $stmt = $conn->query($sql);
+        $pid = $stmt->fetchColumn();
+    }
+
     if (!is_numeric($pid)) {
         header('Location: top.php');
         exit;
     }
+
+
 
     $mapLines = file(__DIR__ . '/../common/inc/map.txt', FILE_IGNORE_NEW_LINES);
     $usedIds = [];
@@ -1085,7 +1095,7 @@ const sns_img = '<?=$sns_img?>';
 
         $('#classname').val(cla);
 
-        if (!$(this).is('section, figure, .inner, .content')) {
+        if (!$(this).is('section, figure, .inner, .content, .player')) {
             $(this).attr('contenteditable', 'true').focus();
         }
 
@@ -1143,7 +1153,7 @@ const sns_img = '<?=$sns_img?>';
             $('#right_editor').removeClass().addClass('link');
         }
 
-        if($(this).is('.glb figure')){
+        if($(this).is('.glbbox figure')){
             $('#right_editor,#editor_area').removeClass();
             e.stopPropagation();
             $('#tageditor,#texteditor').removeClass();
@@ -1158,6 +1168,17 @@ const sns_img = '<?=$sns_img?>';
         }
 
     });
+
+    // AUDIO
+    $('div.player').on('click',function(){
+        console.log('player');
+        $('#audioeditor').addClass('player');
+    })
+
+     $('#audioeditor .close').on('click',function(){
+        $('#audioeditor').removeClass('player');        
+     })
+
 
 // Get CSS properties from selected element 
     function changeEditor($obj){
@@ -1182,10 +1203,9 @@ const sns_img = '<?=$sns_img?>';
             $('#padding-' + pos).val(css('padding-' + pos));
         });
 
-        // $('#display').val(css('display'));
 
         $('#right_editor_box').removeClass().addClass($obj.css('display'));
-        console.log($obj.css('display'));
+        // console.log($obj.css('display'));
 
         $('#html input#styleinput').val($obj.attr('style') || '');
 
@@ -1313,6 +1333,7 @@ const sns_img = '<?=$sns_img?>';
                 var $html = $('<div>').html($('#body main').html().trim());
                 $html.find('[data-tag]').removeAttr('data-tag');
                 var html = $html.html();
+                console.log(html);
                 $('#ImportMain textarea').val(html);
                 $('#ImportMain').addClass('active');
             break;
@@ -1501,10 +1522,9 @@ const sns_img = '<?=$sns_img?>';
 
     $('#audioeditor #audiobox').on('click',' ul li',function(){
         let name = $(this).attr('data-name');
-        $mp3box = $('figure.active').closest('.mp3box');
-            $mp3box.find('.player span')
-            .text('play')
-            .attr('data-name',name);
+        let url = "../common/mp3/"+name;
+        $('div.player.active audio').attr('src',url);
+
         $('#audioeditor').removeClass();
     })
 
@@ -1530,9 +1550,11 @@ const sns_img = '<?=$sns_img?>';
             case 'background-delete':
                 $('.row2.view div.image,main .active').css('background-image','');
                 break;
-            case 'mp3':
-                $('#audioeditor').addClass('active');
-                break;
+
+            // case 'mp3':
+            //     $('#audioeditor').addClass('active');
+            //     break;
+
             case 'addSection':
                     addSection();
                 break;

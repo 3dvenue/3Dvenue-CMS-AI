@@ -17,6 +17,7 @@ $root = file_get_contents('./common/inc/root.txt');
 $map = file_get_contents('./common/inc/map.txt');
 $nav = file_get_contents('./common/inc/nav.txt');
 $sitename = file_get_contents('./common/inc/sitename.txt');
+$content = file_get_contents('./common/inc/content.css');
 $color = file_get_contents('./common/layout/color.css');
 $nav = str_replace('href="/', 'href="'. $root , $nav);
 
@@ -79,13 +80,6 @@ $layout = str_replace('<v>main</v>', $main, $layout);
 $layout = str_replace('<v>nav</v>',  $nav,  $layout);
 
 
-$mp3 = '';
-
-if(strpos($main, 'class="audio"') !== false){
-    $mp3 = file_get_contents('./common/inc/mp3.txt');
-    $mp3 = str_replace('./common', $root . 'common', $mp3);
-}
-
 $lng = trim(file_get_contents('./common/inc/lang.txt'));
 ?>
 <!DOCTYPE html>
@@ -121,11 +115,11 @@ $lng = trim(file_get_contents('./common/inc/lang.txt'));
 <?=$style?>
 <?=$color?>
 <?=$css?>
+<?=$content?>
 </style>
 </head>
 <body>
 <?=$layout?>
-<?=$mp3?>
 <?php 
 if(strpos($main, 'class="glb"') !== false){
 ?>

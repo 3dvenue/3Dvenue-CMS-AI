@@ -60,7 +60,8 @@ if (file_exists($log_file)) {
         // 日付（1つ目のカラム）とその日付、時間部分の取得
         $date_time = trim($log_parts[0]);
         $date = substr($date_time, 0, 10);   // YYYY-MM-DD形式
-        $hour = substr($date_time, 11, 2);   // HH形式
+        // $hour = substr($date_time, 11, 2);   // HH形式
+        $hour = (int)substr($date_time, 11, 2);
 
         // 日別アクセスのカウント
         if (!isset($daily_accesses[$date])) {
@@ -323,7 +324,7 @@ include_once('./lang.php');
               <?php
                 $max = max($daily_accesses);
                 $base = max(50, $max);
-                arsort($daily_accesses);
+                ksort($daily_accesses);
                 foreach ($daily_accesses as $date => $count){
                $width = ($count / $base) * 100;
                 ?>
